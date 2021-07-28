@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-	img = loadImage("charly.jpg");
+	img = loadImage("deer.jpg");
 }
 
 function setup() {
@@ -13,13 +13,13 @@ function setup() {
 }
 
 function draw() {
-	background(230);
+	background(255);
 	//image(img, 0, 0);
 	
 	//img.loadPixels();
 
-	for (var y = 0; y < img.height; y += 10) {
-		for (var x = 0; x < img.width; x += 10) {
+	for (var y = 0; y < img.height; y += 5) {
+		for (var x = 0; x < img.width; x += 5) {
 			
 			var c = img.get(x, y);
 			// Fast but complicated
@@ -28,9 +28,9 @@ function draw() {
 			fill(c);
 			stroke(c);
 			//noFill(c);
-			triangle(x, y, x-5, y-8, x+5, y-1);
+			//triangle(x, y, x-5, y-8, x+5, y-1);
       //line(x, y, x+5, y-10);
-      //ellipse(x, y, 7, 7);
+      ellipse(x, y, 2, 2);
 		}
 	}
 }
