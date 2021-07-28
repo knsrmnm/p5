@@ -1,4 +1,4 @@
-const Pallete = createCols("https://coolors.co/227c9d-17c3b2-ffcb77-fef9ef-fe6d73");
+const Pallete = createCols("https://coolors.co/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0");
 let bg;
 
 function setup() {
@@ -24,19 +24,16 @@ function setup() {
 function draw() {
   
   rectMode(CENTER);
-  //fill(50);
-  noFill();
-  //noStroke();
-
-  rect(width/2, height/2, 200);
-
-  stroke(250);
-  strokeWeight(2);
-  line(width/2+100, height/2-30, width/2+100, height/2+48);
-
-  fill(50);
+  fill(30);
+  //noFill();
   noStroke();
-  rect(width/2 + 90, height/2 + 45, 150, 8);
+
+  quad(width/2-150, height/2+100, width/2+130, height/2+100, width/2+40, height/2-100, width/2-150, height/2-100);
+
+  fill(230);
+  triangle(width/2+10, height/2+100, width/2+130, height/2+100, width/2+60, height/2+160);
+
+  //rect(width/2, height/2, 300, 200);
 
   image(bg,0,0);
 }
